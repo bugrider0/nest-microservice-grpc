@@ -1,5 +1,5 @@
-# nest-microservice-tcp
-nest-microservice-tcp
+# nest-microservice-redis
+nest-microservice-redis
 
 ## Microservice
 ```
