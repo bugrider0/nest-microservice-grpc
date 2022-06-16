@@ -4,10 +4,9 @@ import { AppModule } from './app.module';
 
 export const microservice = async () => {
   return await NestFactory.createMicroservice<MicroserviceOptions>(AppModule, {
-    transport: Transport.TCP,
+    transport: Transport.REDIS,
     options: {
-      host: '127.0.0.1',
-      port: 3001,
+      url: 'redis://127.0.0.1:6379',
     },
   });
 };
