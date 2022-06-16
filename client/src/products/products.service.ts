@@ -13,10 +13,9 @@ export class ProductsService {
 
   constructor() {
     this.client = ClientProxyFactory.create({
-      transport: Transport.TCP,
+      transport: Transport.REDIS,
       options: {
-        host: '127.0.0.1',
-        port: 3001,
+        url: 'redis://127.0.0.1:6379',
       },
     });
   }
