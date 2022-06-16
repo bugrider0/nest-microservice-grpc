@@ -9,6 +9,12 @@ cd ./microservice && cp .env.dev .env
 docker-compose up -d
 ```
 ```
+npx prisma db push
+```
+```
+npm i
+```
+```
 npm t
 ```
 ```
@@ -18,6 +24,9 @@ npm run start:dev
 ## Client
 ```
 cd ./client
+```
+```
+npm i
 ```
 ```
 npm t
