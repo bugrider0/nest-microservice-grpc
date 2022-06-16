@@ -1,5 +1,5 @@
-# nest-microservice-redis
-nest-microservice-redis
+# nest-microservice-gRPC
+nest-microservice-gRPC
 
 ## Microservice
 ```
