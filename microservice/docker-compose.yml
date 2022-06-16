@@ -1,6 +1,14 @@
 version: '3'
 services:
-    database:
+    db-redis:
         image: redis
         ports:
             - 6379:6379
+    db-postgres:
+        image: postgres
+        ports:
+            - 5432:5432
+        environment:
+            POSTGRES_USER: postgres
+            POSTGRES_PASSWORD: 1234
+            POSTGRES_DB: nestjs
