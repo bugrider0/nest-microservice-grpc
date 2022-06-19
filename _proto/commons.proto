@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package commons;
+
+message Empty {}
+
+message Id {
+  string id = 1;
+}
+

@@ -1,0 +1,34 @@
+syntax = "proto3";
+
+package products;
+
+import "commons.proto";
+
+message Product {
+  string id = 1;
+  string createdAt = 2;
+  string updatedAt = 3;
+  string name = 4;
+}
+
+message Products {
+  repeated Product products = 1;
+}
+
+message CreateRequest {
+  string name = 1;
+}
+
+message UpdateRequest {
+  string id = 1;
+  string name = 2;
+}
+
+service ProductsController {
+  rpc create  (CreateRequest) returns (commons.Id);
+  rpc findAll (commons.Empty) returns (Products);
+  rpc findOne (commons.Id)    returns (Product);
+  rpc update  (UpdateRequest) returns (commons.Id);
+  rpc remove  (commons.Id)    returns (commons.Id);
+}
+
